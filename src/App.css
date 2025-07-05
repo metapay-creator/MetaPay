@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #e6f2ff;
+  font-size: 18px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.app {
+  max-width: 700px;
+  width: 100%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 16px 0 10px;
+}
+
+.timestamp {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.balance-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.balance-value {
+  font-weight: bold;
+  font-size: 20px;
+  color: #000;
+}
+
+.button-group {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.action-button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #3399ff;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.action-button:hover {
+  background-color: #007acc;
+}
+
+.wallet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ← 2열 고정 */
+  gap: 12px;
+}
+
+.wallet-card {
+  background-color: #ffffff;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* ✅ 알림 메시지 */
+.toast {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: fadein 0.3s, fadeout 0.3s 2.7s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
+  to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
